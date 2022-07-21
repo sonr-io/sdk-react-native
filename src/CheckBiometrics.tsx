@@ -13,6 +13,9 @@ const CheckBiometrics: React.FC = () => {
     const compatible = await LocalAuthentication.hasHardwareAsync();
     console.log("my reposnd is", compatible);
 
+    const savedBiometrics = await LocalAuthentication.isEnrolledAsync();
+    if (!savedBiometrics) return alert("Biometric record not found");
+
     const auth = await LocalAuthentication.authenticateAsync({
       promptMessage: "hello - propmt message",
     }); //2 - facial
