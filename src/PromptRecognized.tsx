@@ -35,7 +35,6 @@ const Component: React.FC = () => {
           value={username}
           onChangeText={setUsername}
           icon="IconUser"
-          domain
         />
       </ContainerContent>
 
