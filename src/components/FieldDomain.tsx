@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import WarningOutline from "../icons/WarningOutline";
 import IconUser from "../icons/User";
-import { ValidateUserName } from "@sonr-io/validation";
+import { ValidateUserName } from "@sonr-io/validation/dist/index";
 
 type Props = {
   label: string;
