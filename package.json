@@ -1,5 +1,5 @@
 {
-  "name": "sonr-io-react-native-ui-components",
+  "name": "@sonr-io/react-native-ui-components",
   "version": "0.0.4",
   "license": "MIT",
   "main": "./dist/index.js",
