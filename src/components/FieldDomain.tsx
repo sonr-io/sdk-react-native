@@ -14,12 +14,10 @@ import { ValidateUserName } from "@sonr-io/validation";
 type Props = {
   label: string;
   value: string;
-  secureTextEntry?: boolean;
   onChangeText: Dispatch<SetStateAction<string>>;
   lightTheme?: boolean;
   autoFocus?: boolean;
   style?: StyleProp<ViewStyle>;
-  domain?: boolean;
 };
 const FieldDomain: React.FC<Props> = (props: Props) => {
   const [warning, setWarning] = useState("");
@@ -35,18 +33,19 @@ const FieldDomain: React.FC<Props> = (props: Props) => {
     props.onChangeText(text);
   };
 
+  let iconColor = props.lightTheme ? "#9893A2" : "#F6F5FA";
+
   return (
     <View style={props.style}>
       <Text style={[styles.labelText]}>{props.label}</Text>
       <View
         style={[styles.input, warning ? { borderColor: "#FF2866" } : undefined]}
       >
-        {IconUser(warning && "#FF2866")}
+        {IconUser(warning ? "#FF2866" : iconColor)}
         <TextInput
           style={styles.textInput}
           value={props.value}
           onChangeText={validateDomain}
-          secureTextEntry={props.secureTextEntry}
           autoFocus={props.autoFocus}
           autoCapitalize={"none"}
           autoCorrect={false}
