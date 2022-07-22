@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "jsx": "react",
-    "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noEmit": false,
+    "outDir": "./dist",
+    "skipLibCheck": true,
     "strict": true,
-    "skipLibCheck": true
+    "target": "es2016"
   },
   "files": ["./index.ts"],
   "extends": "expo/tsconfig.base"
