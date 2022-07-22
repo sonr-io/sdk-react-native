@@ -1,15 +1,19 @@
 {
-  "name": "sdk-react-native",
-  "version": "1.0.0",
+  "name": "@sonr-io/react-native-ui-components",
+  "version": "0.0.1",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "expo start",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
     "lint": "prettier --check .",
     "lint-fix": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "yarn clean && tsc && yarn copy-assets",
+    "clean": "rm -rf ./dist",
+    "copy-assets": "cp -r ./assets ./dist/assets"
   },
   "peerDependencies": {
     "expo": "~45.0.0",
