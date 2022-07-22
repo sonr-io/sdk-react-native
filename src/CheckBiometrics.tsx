@@ -11,14 +11,17 @@ const CheckBiometrics: React.FC = () => {
 
   const isBiometricSupport = async () => {
     const compatible = await LocalAuthentication.hasHardwareAsync();
-    console.log("my reposnd is", compatible);
+    console.log("is compatible", compatible);
 
     const savedBiometrics = await LocalAuthentication.isEnrolledAsync();
-    if (!savedBiometrics) return alert("Biometric record not found");
+    if (!savedBiometrics) {
+      console.log("Biometric record not found");
+    }
 
     const auth = await LocalAuthentication.authenticateAsync({
       promptMessage: "hello - propmt message",
     }); //2 - facial
+    console.log("auth", JSON.stringify(auth));
   };
   useEffect(() => {
     isBiometricSupport();
@@ -36,10 +39,10 @@ const CheckBiometrics: React.FC = () => {
         </Text>
         <Text>
           A KeyPrint is another fragment of your credentials that is linked to a
-          device’s biometric reader, like FaceID or TouchID.
+          devices biometric reader, like FaceID or TouchID.
         </Text>
         <Text>
-          KeyPrints allow Sonr to securely recognize your account’s devices,
+          KeyPrints allow Sonr to securely recognize your accounts devices,
           without requiring a password.
         </Text>
       </View>
