@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SonrLogo from "./icons/SonrLogo";
 import FieldWithIcon from "./components/FieldWithIcon";
+import FieldDomain from "./components/FieldDomain";
 import { AuthenticationContext } from "./AuthenticationContext";
 import PrimaryButton from "./components/PrimaryButton";
 import Motor from "./sandbox";
@@ -36,12 +37,11 @@ const CreateAccount: React.FC = () => {
           Create your account
         </Text>
 
-        <FieldWithIcon
+        <FieldDomain
           label="Your Username"
           value={username}
           onChangeText={setUsername}
           autoFocus={true}
-          icon="IconUser"
           style={{ marginBottom: 20 }}
         />
 

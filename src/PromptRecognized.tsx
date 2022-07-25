@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import SonrLogo from "./icons/SonrLogo";
-import FieldWithIcon from "./components/FieldWithIcon";
+import FieldDomain from "./components/FieldDomain";
 import SecondaryButton from "./components/SecondaryButton";
 import { AuthenticationContext } from "./AuthenticationContext";
 import TextButton from "./components/TextButton";
@@ -30,11 +30,10 @@ const Component: React.FC = () => {
         <Text style={[styles.subtitle2, { marginBottom: 64 }]}>
           Welcome Back
         </Text>
-        <FieldWithIcon
+        <FieldDomain
           label="Wallet Address or .snr Domain"
           value={username}
           onChangeText={setUsername}
-          icon="IconUser"
         />
       </ContainerContent>
 
