@@ -1,19 +1,37 @@
-## how to run the project
+## React Native UI Components
 
-install all the dependencies
+Behavioral UI components for Sonr Account management and authentication.
+
+### Installation
 
 ```
-yarn
+npm install @sonr-io/react-native-ui-components
 ```
 
-start storybook
+### Basic usage
+
+```
+import { AuthComponent } from "@sonr-io/react-native-ui-components"
+```
+
+```
+<AuthComponent onSuccess={alert} />
+```
+
+### Storybook
+
+The components can also be tested with Storybook + Expo.
 
 ```
 yarn storybook
 ```
 
-start the project
+Storybook controls can also be run for a browser.
 
 ```
-yarn start
+yarn storybook-controls
 ```
+
+### Publishing
+
+Publishing to NPM happens automatically on every GitHub release.

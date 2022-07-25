@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "start": "expo start",
-    "storybook": "start-storybook -p 7007",
+    "storybook": "expo start",
+    "storybook-control": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
     "lint": "prettier --check .",
     "lint-fix": "prettier --write .",
