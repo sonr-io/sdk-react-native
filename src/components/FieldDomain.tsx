@@ -10,6 +10,7 @@ import {
 import WarningOutline from "../icons/WarningOutline";
 import IconUser from "../icons/User";
 import { ValidateUserName } from "@sonr-io/validation/dist/index";
+import style from "../../storybook/stories/CenterViewDark/style";
 
 type Props = {
   label: string;
@@ -51,7 +52,11 @@ const FieldDomain: React.FC<Props> = (props: Props) => {
           autoCorrect={false}
         />
         {props.value?.length > 0 && <Text style={styles.domain}>.snr</Text>}
-        {warning ? <WarningOutline style={styles.warningIcon} /> : null}
+        {warning ? (
+          <View style={styles.warningIcon}>
+            <WarningOutline />
+          </View>
+        ) : null}
       </View>
       {!!warning && <Text style={styles.warningText}>{warning}</Text>}
     </View>
