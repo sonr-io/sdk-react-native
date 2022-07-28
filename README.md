@@ -35,3 +35,9 @@ yarn storybook-controls
 ### Publishing
 
 Publishing to NPM happens automatically on every GitHub release.
+
+### Next steps
+
+- Handle remaining authentication concepts such as pre-shared keys, keyprints, nearby devices etc
+- Implement account recovery
+- Implement account management component
